@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reletive相对定位</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            border: 1px solid red;
+        }
+        
+        .demo1 {
+            border: 10px dotted pink;
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            position: relative;
+            /* 占的位置不变，显示的位置有偏移 */
+            /* 对齐做位移、给决定定位做父亲的 */
+            z-index: 1;
+            /* 提高优先级 */
+            top: 10px;
+            left: 10px;
+        }
+        
+        .demo2 {
+            border: 10px solid blue;
+            width: 500px;
+            height: 500px;
+            background-color: green;
+            position: relative;
+            /* 如果两个图片出现重叠，可根据z-index来调节 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="demo1"></div>
+        <div class="demo2"></div>
+    </div>
+
+</body>
+
+</html>
